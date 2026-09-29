@@ -8,13 +8,20 @@ detects defects, localises them with boxes, classifies them and estimates severi
 | Box + class (pothole, longitudinal, transverse, alligator crack) | YOLOv8n fine-tuned on RDD2022-India (labels D40, D00, D10, D20) |
 | Severity (Low / Medium / High) | Rule-based score from defect size + defect type (see below) |
 
+## Quick start (run the code)
+```
+pip install -r requirements.txt
+python infer.py path/to/road_image_or_folder        # uses weights/best.pt; annotated images + predictions.json in results/predictions/
+```
+Try it on the bundled samples: `python infer.py results/samples`.
+
 ## Pipeline
 1. `scripts/download_india.py` – pulls only `India.zip` (~500 MB) out of the 13 GB Figshare archive.
 2. `scripts/prepare_data.py` – VOC XML -> YOLO labels, seeded 80/10/10 split (6,164 / 771 / 771 images; official test labels are hidden).
    Other RDD labels (D44, D01, D11, D43, D50) are dropped, so images with only those act as background.
 3. `scripts/train.py` – YOLOv8n fine-tuning (CPU only).
 4. `scripts/evaluate.py` – mAP / P / R on the held-out test split + predicted severity counts (`results/metrics.json`).
-5. `infer.py` – `python infer.py <image_or_folder> --weights weights/best.pt --imgsz 416` -> annotated images + `predictions.json`
+5. `infer.py` – `python infer.py <image_or_folder> --weights weights/best.pt` -> annotated images + `predictions.json`
    (class, confidence, box, severity). Samples are in `results/predictions/`.
 
 ```

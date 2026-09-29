@@ -16,7 +16,7 @@ ap.add_argument("source")
 ap.add_argument("--weights", default="weights/best.pt")
 ap.add_argument("--out", default="results/predictions")
 ap.add_argument("--conf", type=float, default=0.25)
-ap.add_argument("--imgsz", type=int, default=512)
+ap.add_argument("--imgsz", type=int, default=416)
 a = ap.parse_args()
 
 model = YOLO(a.weights)
