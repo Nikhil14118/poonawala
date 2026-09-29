@@ -1,0 +1,35 @@
+{
+  "mAP50": 0.0926748636608347,
+  "mAP50-95": 0.030977973665367496,
+  "precision": 0.14822462818386095,
+  "recall": 0.14959558084729352,
+  "per_class": {
+    "longitudinal_crack": {
+      "P": 0.12989374153201189,
+      "R": 0.06578947368421052,
+      "AP50": 0.046832471891995825
+    },
+    "transverse_crack": {
+      "P": 0.0,
+      "R": 0.0,
+      "AP50": 0.0
+    },
+    "alligator_crack": {
+      "P": 0.19618917708802389,
+      "R": 0.35348837209302325,
+      "AP50": 0.19744983423735016
+    },
+    "pothole": {
+      "P": 0.26681559411540795,
+      "R": 0.1791044776119403,
+      "AP50": 0.12641714851399283
+    }
+  },
+  "predicted_severity_counts": {
+    "alligator_crack/High": 141,
+    "alligator_crack/Medium": 5,
+    "longitudinal_crack/Low": 1,
+    "pothole/High": 4,
+    "pothole/Medium": 14
+  }
+}

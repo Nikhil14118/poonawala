@@ -1,0 +1,6 @@
+data/
+runs/
+*.log
+*.err
+yolov8n.pt
+__pycache__/

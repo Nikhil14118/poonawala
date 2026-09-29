@@ -1,0 +1,60 @@
+{
+  "India_000003.jpg": [],
+  "India_000005.jpg": [
+    {
+      "class": "pothole",
+      "confidence": 0.192,
+      "bbox_xyxy": [
+        89,
+        479,
+        385,
+        555
+      ],
+      "severity": "High",
+      "severity_score": 0.898
+    }
+  ],
+  "India_000019.jpg": [],
+  "India_000026.jpg": [],
+  "India_000040.jpg": [],
+  "India_000043.jpg": [
+    {
+      "class": "alligator_crack",
+      "confidence": 0.34,
+      "bbox_xyxy": [
+        44,
+        449,
+        702,
+        649
+      ],
+      "severity": "High",
+      "severity_score": 0.906
+    },
+    {
+      "class": "alligator_crack",
+      "confidence": 0.268,
+      "bbox_xyxy": [
+        204,
+        462,
+        708,
+        648
+      ],
+      "severity": "High",
+      "severity_score": 0.792
+    },
+    {
+      "class": "pothole",
+      "confidence": 0.179,
+      "bbox_xyxy": [
+        208,
+        493,
+        263,
+        526
+      ],
+      "severity": "Medium",
+      "severity_score": 0.466
+    }
+  ],
+  "India_000072.jpg": [],
+  "India_000081.jpg": []
+}
