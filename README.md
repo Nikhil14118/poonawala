@@ -39,8 +39,10 @@ with class weights pothole 1.0, alligator 0.8, transverse 0.5, longitudinal 0.4.
 Low < 0.45 <= Medium < 0.70 <= High. Thresholds/weights are heuristics and should be validated with domain experts or severity-labelled data.
 
 ## Results (held-out test split, 771 images) — **preliminary**
-The model was trained on a CPU-only laptop under a time limit: 2 epochs at 512 px on the full train set, then 3 epochs at 416 px on half of it
-(5 epochs total; the planned 15-epoch run was interrupted). It is therefore **under-trained** and the numbers are low.
+The model was trained on a CPU-only laptop under a time limit. Training ran in two short stages: 2 epochs at 512 px on the full train set, then a
+second run (416 px, half the train set) that was stopped after 3 epochs. The submitted `weights/best.pt` is the checkpoint with the best validation
+fitness from that second run (its first epoch), i.e. **3 epochs of training in total**. The planned 15-epoch run was interrupted.
+It is therefore **heavily under-trained** and the numbers are low.
 
 | Class | Precision | Recall | AP@0.5 |
 |---|---|---|---|
